@@ -162,13 +162,13 @@ echo $conn->error;
 <p>
     <?php echo "<span>Programme Fidélité : </span>"."<br><br>";
     while ($row = $result->fetch_assoc()) {
-        echo $row['lastName']."<br>";
-        echo $row['firstName']."<br>";
-        echo $row['birthDate']."<br>";
+        echo "Nom : ".$row['lastName']."<br>";
+        echo "Prénom : ".$row['firstName']."<br>";
+        echo "Date de naissance : ".$row['birthDate']."<br>";
         if ($row['card']==='1'){
-            echo "oui"."<br>";
+            echo " Carte de fidélité : oui"."<br>";
         }
-        else echo "non"."<br>";
-        echo $row['cardNumber']."<br><br>";
+        else echo "Carte de fidélité : non"."<br>";
+        echo "Numéro de carte : ".$row['cardNumber']."<br><br>";
     }?>
 </p>
